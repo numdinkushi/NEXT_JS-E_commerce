@@ -241,22 +241,25 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData, categories, colo
                                 </div>
                             </FormItem>
                         )} />
-                        <FormField control={form.control} name="isArchived" render={({ field }) => (
-                            <FormItem className="flex flex-row items-start space-x-3 space-y-1 rounded-md border p-4" >
-                                <FormControl>
-                                    {/* @ts-ignore */}
-                                    <Checkbox checked={field.value} onCheckedChange={field.onChange} />
-                                </FormControl>
-                                <div className="space-y-1 leading-none">
-                                    <FormLabel>
-                                        Archived
-                                    </FormLabel>
-                                    <FormDescription>
-                                        This product will not appear on the home page
-                                    </FormDescription>
-                                </div>
-                            </FormItem>
-                        )} />
+
+                        <div className="hidden">
+                            <FormField control={form.control} name="isArchived" render={({ field }) => (
+                                <FormItem className="flex flex-row items-start space-x-3 space-y-1 rounded-md border p-4" >
+                                    <FormControl>
+                                        {/* @ts-ignore */}
+                                        <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                                    </FormControl>
+                                    <div className="space-y-1 leading-none">
+                                        <FormLabel>
+                                            Archived
+                                        </FormLabel>
+                                        <FormDescription>
+                                            This product will not appear on the home page
+                                        </FormDescription>
+                                    </div>
+                                </FormItem>
+                            )} />
+                        </div>
 
                     </div>
                     <Button disabled={loading} className="ml-auto" type="submit">

@@ -70,7 +70,7 @@ export async function POST(
                 colorId,
                 sizeId,
                 isFeatured,
-                isArchived,
+                isArchived: !isFeatured,
                 storeId: params.storeId,
                 images: {
                     createMany: {

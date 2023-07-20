@@ -106,7 +106,7 @@ export async function PATCH(
                     }
                 },
                 isFeatured,
-                isArchived,
+                isArchived: !isFeatured,
             }
         });
 
