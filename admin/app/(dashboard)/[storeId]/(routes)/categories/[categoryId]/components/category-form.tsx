@@ -121,9 +121,10 @@ const CategoryForm: React.FC<CategoryFormProps> = ({ initialData, billboards }) 
                                         </SelectTrigger>
                                     </FormControl>
                                     <SelectContent>
-                                        {billboards.map((billboard) => {
+                                        {billboards.map((billboard, index) => {
                                             return (
-                                                <SelectItem key={billboard.id} value={billboard.id}>
+                                                // <SelectItem key={billboard.id} value={billboard.id}>
+                                                <SelectItem key={index} value={billboard.id}>
                                                     {billboard.label}
                                                 </SelectItem>
                                             );

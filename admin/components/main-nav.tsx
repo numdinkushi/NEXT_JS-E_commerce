@@ -30,7 +30,7 @@ const MainNav = ({
             active: pathName === `/${params.storeId}/categories`
         },
         {
-            href: `/${params.storeId}/colors`,
+            href: `/${params.storeId}/sizes`,
             label: 'Sizes',
             active: pathName === `/${params.storeId}/sizes`
         },
@@ -38,6 +38,11 @@ const MainNav = ({
             href: `/${params.storeId}/colors`,
             label: 'Colors',
             active: pathName === `/${params.storeId}/colors`
+        },
+        {
+            href: `/${params.storeId}/products`,
+            label: 'Products',
+            active: pathName === `/${params.storeId}/products`
         },
         {
             href: `/${params.storeId}/settings`,
@@ -51,7 +56,7 @@ const MainNav = ({
                 {
                     routes.map((route, index)=>{
                         return (
-                            <Link key={route.href}
+                            <Link key={index}
                             href={route.href}
                             className={cn("text-sm font-medium transition-colors hover:text-primary", route.active ? "text-black dark:text-white" : "text-muted-foreground")}
                             >
